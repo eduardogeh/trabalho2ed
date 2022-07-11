@@ -1,2 +1,2 @@
 # trabalho2ed
-Trabalho sobre Heap Binário
+Implementação de filas de prioridade utilizando heap binário
