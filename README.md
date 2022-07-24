@@ -8,6 +8,6 @@ Relatório
 - [ ] Explicar implementação
 
 Implementação
-- [ ] inserção
-- [ ] Remoção
-- [ ] Impressão/Consulta
+- [x] inserção
+- [x] Remoção
+- [x] Impressão/Consulta
