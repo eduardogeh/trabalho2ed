@@ -4,10 +4,6 @@
 #include "heap.h"
 void cria_heap(Heap* H, int tamanho){
 	
-	//int tamanho;
-	//printf("Qual tamanho maximo do heap? ");
-	//scanf("%d", &tamanho);
-	
 	H->tam= tamanho;
 	H->vet = malloc(tamanho*sizeof(int));
 	
@@ -19,7 +15,7 @@ void balanceamento(Heap* H, int indice){
 	if(indice == 0)
 		return;
 	int par_impar = indice % 2;
-	//se der 0 é par , se der 1 é impar-
+	//se der 0 Ã© par , se der 1 Ã© impar
 	int indice_pai;
 	
 	if(par_impar == 1)
@@ -73,7 +69,7 @@ void balanceamento_remocao(Heap *H, int indice){
 		int aux= H->vet[indice];
 		
 		if(H->vet[indice*2+2] > H->vet[indice*2+1]){
-			//direita é maior
+			//direita Ã© maior
 			if(H->vet[indice*2+2] > H->vet[indice]){
 				 H->vet[indice]= H->vet[indice*2+2];
 				 H->vet[indice*2+2]= aux;
@@ -81,7 +77,7 @@ void balanceamento_remocao(Heap *H, int indice){
 			}
 			
 		}else{
-			//esquerda é maior
+			//esquerda Ã© maior
 			if(H->vet[indice*2+1]> H->vet[indice]){
 				H->vet[indice]= H->vet[indice*2+1];
 				 H->vet[indice*2+1]= aux;
