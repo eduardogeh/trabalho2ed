@@ -14,7 +14,6 @@ void insercao(Heap* H, int num);
 
 void balanceamento_remocao(Heap *H, int indice);
 
-
 void remocao(Heap *H);
 
 void impressao_ordem(Heap H);

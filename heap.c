@@ -19,7 +19,7 @@ void balanceamento(Heap* H, int indice){
 	if(indice == 0)
 		return;
 	int par_impar = indice % 2;
-	//se der 0 é par , se der 1 é impar
+	//se der 0 é par , se der 1 é impar-
 	int indice_pai;
 	
 	if(par_impar == 1)
@@ -137,21 +137,26 @@ void impressao_ordem(Heap H){
 void impressao_de_filhos(Heap H, int indice){
 	if(indice < H.indice_atual){
 		printf("%d ", H.vet[indice]);
-		impressao_de_filhos(H, indice*2+1); //desenha a esquerda
-		impressao_de_filhos(H, indice*2+2); //desenha a direita
+	}else{
+		printf("nao tem");
 	}
 }
 
 void impressao_completa(Heap H, int indice){
 	int i;
-	
+	if(indice >= H.indice_atual){
+		return;
+	}
 	printf("\ntermo: %d", H.vet[indice]);
-	printf("\nfilhos da direita: ");
+	printf("\nfilho da direita: ");
 	
 	impressao_de_filhos(H, indice*2+2);
 	
-	printf("\nfilhos da esquerda: ");
+	printf("\nfilho da esquerda: ");
 	impressao_de_filhos(H, indice*2+1);
+	
+	impressao_completa(H, indice*2+1);
+	impressao_completa(H, indice*2+2);
 	
 }
 
